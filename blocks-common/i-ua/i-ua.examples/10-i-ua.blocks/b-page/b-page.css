@@ -1,0 +1,32 @@
+.i-ua_css_standard
+{
+    background-color: #f5f5ea;
+}
+
+.b-page__body
+{
+    background-color: #fff;
+}
+
+table
+{
+    width: 85%;
+    margin: 10px auto;
+    padding: 25px 0;
+
+    background: #fff;
+}
+
+td
+{
+    padding: 15px 25px;
+
+    vertical-align: top;
+
+    border-bottom: 1px solid rgba(83, 83, 83, .33);
+}
+
+td:not(:last-child)
+{
+    border-right: 1px solid rgba(83, 83, 83, .33);
+}
