@@ -49,7 +49,7 @@ block b-page {
 
     tag: 'body'
 
-    mix: [{ elem: 'body' }]
+    mix: [{ elem: 'body' }, { block: 'i-ua', js: true }]
 
     elem root {
 
