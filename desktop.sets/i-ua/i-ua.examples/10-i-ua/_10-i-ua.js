@@ -3286,8 +3286,8 @@ $(function() {
 ;
 /* ../../../../blocks-common/i-ua/i-ua.js begin */
 /*
- * Блок для определения способа взаимодействия пользователя со страницей.
- * Различает взамодействие с помощью клавиатуры или мышки-пальца.
+ * Block to determine how the user interacts with the page.
+ * Distinguishes interaction with a keyboard or mouse/finger.
  */
 BEM.DOM.decl('i-ua', {}, {
 
@@ -3306,9 +3306,11 @@ BEM.DOM.decl('i-ua', {}, {
         /* this – instance */
         this.setMod('interaction', 'pointer');
 
-        this.__self
-                   .liveUnbindFrom('mousedown', this.__self._onPointer)
-                   .liveBindTo('keydown', this.__self._onKeyboard);
+        var __self = this.__self;
+
+        __self
+              .liveUnbindFrom('mousedown', __self._onPointer)
+              .liveBindTo('keydown', __self._onKeyboard);
     },
 
     /**
@@ -3318,9 +3320,11 @@ BEM.DOM.decl('i-ua', {}, {
         /* this – instance */
         this.setMod('interaction', 'keyboard');
 
-        this.__self
-                   .liveUnbindFrom('keydown', this.__self._onKeyboard)
-                   .liveBindTo('mousedown', this.__self._onPointer);
+        var __self = this.__self;
+
+        __self
+               .liveUnbindFrom('keydown', __self._onKeyboard)
+               .liveBindTo('mousedown', __self._onPointer);
     }
 
 });
